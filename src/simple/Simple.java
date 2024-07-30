@@ -20,9 +20,10 @@ public class Simple {
 
         String url = "jdbc:mysql://localhost:3306/kbc";
         String user = "root";
-        String pass = "ABCD@1234";
+        String pass = "Rssb@1527";
 
         Connection connection = DriverManager.getConnection(url, user, pass);
+        Class.forName("com.mysql.jdbc.Driver");
         Statement statement = connection.createStatement();
 
         try {
@@ -32,18 +33,15 @@ public class Simple {
             printStatements();
             int enter = m.nextInt();
 
-
             if (enter == 1) {
                 System.out.println("\nTo Register for the game full fill the requirement");
                 System.out.println("\nEnter your name:-");
                 name = m.next();
 
-
                 System.out.println("Enter your Age:-");
                 age = m.nextInt();
 
                 System.out.println("Hello " + name + " welcome to K.B.C");
-
                 {
                     for (int b = 1; b <= 5; b++) {
                         for (int a = 1; a <= 22; a++) {
@@ -158,7 +156,6 @@ public class Simple {
 
                     }
 
-
                     move:
                     {
                         long change = System.currentTimeMillis();
@@ -185,7 +182,8 @@ public class Simple {
 
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         long first = System.currentTimeMillis();
-                        String sss = m.next();
+                        String ans = m.next();
+                        ans = ans.toLowerCase();
                         long second = System.currentTimeMillis();
                         long timer = second - first;
                         if (timer > 31000) {
@@ -194,9 +192,8 @@ public class Simple {
 
                             return;
                         }
-                        switch (sss) {
+                        switch (ans) {
                             case "d":
-                            case "D":
 
                                 System.out.println("yes you are right you won Rs.5,000");
                                 Thread.sleep(1600);
@@ -206,8 +203,7 @@ public class Simple {
                                     System.out.println("\b");
                                 }
                                 break move;
-                            case "LIFELINE":
-                            case "Lifeline":
+
                             case "lifeline":
                                 for (int asd = 1; asd <= 1000; asd++) {
                                     System.out.println("\b");
@@ -215,16 +211,16 @@ public class Simple {
                                 x.lifeline(4);
                                 System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                                 first = System.currentTimeMillis();
-                                sss = m.next();
+                                ans = m.next();
+                                ans = ans.toLowerCase();
                                 second = System.currentTimeMillis();
                                 timer = second - first + timer;
                                 if (timer > 31000) {
                                     System.out.println("Sorry you are too late. You have 30 Seconds to give answer");
                                     return;
                                 }
-                                switch (sss) {
+                                switch (ans) {
                                     case "d":
-                                    case "D":
 
                                         System.out.println("yes you are right you won Rs.5,000");
                                         Thread.sleep(1600);
@@ -234,8 +230,7 @@ public class Simple {
                                             System.out.println("\b");
                                         }
                                         break move;
-                                    case "LIFELINE":
-                                    case "Lifeline":
+
                                     case "lifeline":
                                         for (int asd = 1; asd <= 1000; asd++) {
                                             System.out.println("\b");
@@ -243,17 +238,16 @@ public class Simple {
                                         x.lifeline(4);
                                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                                         first = System.currentTimeMillis();
-                                        sss = m.next();
+                                        ans = m.next();
+                                        ans = ans.toLowerCase();
                                         second = System.currentTimeMillis();
                                         timer = second - first + timer;
                                         if (timer > 31000) {
                                             System.out.println("Sorry you are too late. You have 30 Seconds to give answer");
                                             return;
                                         }
-                                        switch (sss) {
+                                        switch (ans) {
                                             case "d":
-                                            case "D":
-
 
                                                 System.out.println("yes you are right you won Rs.5,000");
                                                 Thread.sleep(1600);
@@ -305,7 +299,8 @@ public class Simple {
 
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         long first = System.currentTimeMillis();
-                        String sss = m.next();
+                        String ans = m.next();
+                        ans = ans.toLowerCase();
                         long second = System.currentTimeMillis();
                         long timer = second - first;
                         if (timer > 31000) {
@@ -314,10 +309,8 @@ public class Simple {
 
                             return;
                         }
-                        switch (sss) {
+                        switch (ans) {
                             case "b":
-                            case "B":
-
 
                                 System.out.println("yes you are right you won Rs.10,000");
                                 Thread.sleep(1600);
@@ -327,8 +320,7 @@ public class Simple {
                                     System.out.println("\b");
                                 }
                                 break move1;
-                            case "LIFELINE":
-                            case "Lifeline":
+
                             case "lifeline":
                                 for (int asd = 1; asd <= 1000; asd++) {
                                     System.out.println("\b");
@@ -336,16 +328,16 @@ public class Simple {
                                 System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                                 x.lifeline(2);
                                 first = System.currentTimeMillis();
-                                sss = m.next();
+                                ans = m.next();
+                                ans = ans.toLowerCase();
                                 second = System.currentTimeMillis();
                                 timer = second - first + timer;
                                 if (timer > 31000) {
                                     System.out.println("Sorry you are too late. You have 30 Seconds to give answer");
                                     return;
                                 }
-                                switch (sss) {
+                                switch (ans) {
                                     case "b":
-                                    case "B":
 
                                         System.out.println("yes you are right you won Rs.10,000");
                                         Thread.sleep(1600);
@@ -355,8 +347,7 @@ public class Simple {
                                             System.out.println("\b");
                                         }
                                         break move1;
-                                    case "LIFELINE":
-                                    case "Lifeline":
+
                                     case "lifeline":
                                         for (int asd = 1; asd <= 100; asd++) {
                                             System.out.println();
@@ -364,16 +355,16 @@ public class Simple {
                                         x.lifeline(2);
                                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                                         first = System.currentTimeMillis();
-                                        sss = m.next();
+                                        ans = m.next();
+                                        ans = ans.toLowerCase();
                                         second = System.currentTimeMillis();
                                         timer = second - first + timer;
                                         if (timer > 31000) {
                                             System.out.println("Sorry you are too late. You have 30 Seconds to give answer");
                                             return;
                                         }
-                                        switch (sss) {
+                                        switch (ans) {
                                             case "b":
-                                            case "B":
 
                                                 System.out.println("yes you are right you won Rs.10,000");
                                                 Thread.sleep(1600);
@@ -424,7 +415,8 @@ public class Simple {
 
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         long first = System.currentTimeMillis();
-                        String sss = m.next();
+                        String ans = m.next();
+                        ans = ans.toLowerCase();
                         long second = System.currentTimeMillis();
                         long timer = second - first;
                         if (timer > 31000) {
@@ -433,9 +425,8 @@ public class Simple {
 
                             return;
                         }
-                        switch (sss) {
+                        switch (ans) {
                             case "d":
-                            case "D":
 
                                 System.out.println("yes you are right you won Rs.20,000");
                                 Thread.sleep(1600);
@@ -445,8 +436,7 @@ public class Simple {
                                     System.out.println("\b");
                                 }
                                 break move2;
-                            case "LIFELINE":
-                            case "Lifeline":
+
                             case "lifeline":
                                 for (int asd = 1; asd <= 1000; asd++) {
                                     System.out.println("\b");
@@ -454,16 +444,16 @@ public class Simple {
                                 x.lifeline(4);
                                 System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                                 first = System.currentTimeMillis();
-                                sss = m.next();
+                                ans = m.next();
+                                ans = ans.toLowerCase();
                                 second = System.currentTimeMillis();
                                 timer = second - first + timer;
                                 if (timer > 31000) {
                                     System.out.println("Sorry you are too late. You have 30 Seconds to give answer");
                                     return;
                                 }
-                                switch (sss) {
+                                switch (ans) {
                                     case "d":
-                                    case "D":
 
                                         System.out.println("yes you are right you won Rs.20,000");
                                         Thread.sleep(1600);
@@ -473,8 +463,7 @@ public class Simple {
                                             System.out.println("\b");
                                         }
                                         break move2;
-                                    case "LIFELINE":
-                                    case "Lifeline":
+
                                     case "lifeline":
                                         for (int asd = 1; asd <= 1000; asd++) {
                                             System.out.println("\b");
@@ -482,16 +471,16 @@ public class Simple {
                                         x.lifeline(4);
                                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                                         first = System.currentTimeMillis();
-                                        sss = m.next();
+                                        ans = m.next();
+                                        ans = ans.toLowerCase();
                                         second = System.currentTimeMillis();
                                         timer = second - first + timer;
                                         if (timer > 31000) {
                                             System.out.println("Sorry you are too late. You have 30 Seconds to give answer");
                                             return;
                                         }
-                                        switch (sss) {
+                                        switch (ans) {
                                             case "d":
-                                            case "D":
 
                                                 System.out.println("yes you are right you won Rs.20,000");
                                                 Thread.sleep(1600);
@@ -539,7 +528,8 @@ public class Simple {
 
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         long first = System.currentTimeMillis();
-                        String sss = m.next();
+                        String ans = m.next();
+                        ans = ans.toLowerCase();
                         long second = System.currentTimeMillis();
                         long timer = second - first;
                         if (timer > 31000) {
@@ -548,9 +538,8 @@ public class Simple {
 
                             return;
                         }
-                        switch (sss) {
+                        switch (ans) {
                             case "b":
-                            case "B":
                                 System.out.println("yes you are right you won Rs.40,000");
                                 Thread.sleep(1600);
                                 System.out.println("\nYour next question for Rs.80,000");
@@ -559,8 +548,7 @@ public class Simple {
                                     System.out.println("\b");
                                 }
                                 break move3;
-                            case "LIFELINE":
-                            case "Lifeline":
+
                             case "lifeline":
                                 for (int asd = 1; asd <= 1000; asd++) {
                                     System.out.println("\b");
@@ -568,16 +556,16 @@ public class Simple {
                                 x.lifeline(2);
                                 System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                                 first = System.currentTimeMillis();
-                                sss = m.next();
+                                ans = m.next();
+                                ans = ans.toLowerCase();
                                 second = System.currentTimeMillis();
                                 timer = second - first + timer;
                                 if (timer > 31000) {
                                     System.out.println("Sorry you are too late. You have 30 Seconds to give answer");
                                     return;
                                 }
-                                switch (sss) {
+                                switch (ans) {
                                     case "b":
-                                    case "B":
 
                                         statement.executeUpdate("update score set score=40000 where name like '" + name + "' && age=" + age + ";");
                                         System.out.println("yes you are right you won Rs.40,000");
@@ -588,8 +576,7 @@ public class Simple {
                                             System.out.println("\b");
                                         }
                                         break move3;
-                                    case "LIFELINE":
-                                    case "Lifeline":
+
                                     case "lifeline":
                                         for (int asd = 1; asd <= 1000; asd++) {
                                             System.out.println("\b");
@@ -597,16 +584,17 @@ public class Simple {
                                         x.lifeline(2);
                                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                                         first = System.currentTimeMillis();
-                                        sss = m.next();
+                                        ans = m.next();
+                                        ans = ans.toLowerCase();
                                         second = System.currentTimeMillis();
                                         timer = second - first + timer;
                                         if (timer > 31000) {
                                             System.out.println("Sorry you are too late. You have 30 Seconds to give answer");
                                             return;
                                         }
-                                        switch (sss) {
+                                        switch (ans) {
                                             case "b":
-                                            case "B":
+
                                                 statement.executeUpdate("update score set score=40000 where name like '" + name + "' && age=" + age + ";");
                                                 System.out.println("yes you are right you won Rs.40,000");
                                                 Thread.sleep(1600);
@@ -655,7 +643,8 @@ public class Simple {
 
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         long first = System.currentTimeMillis();
-                        String sss = m.next();
+                        String ans = m.next();
+                        ans = ans.toLowerCase();
                         long second = System.currentTimeMillis();
                         long timer = second - first;
                         if (timer > 31000) {
@@ -664,9 +653,8 @@ public class Simple {
 
                             return;
                         }
-                        switch (sss) {
+                        switch (ans) {
                             case "a":
-                            case "A":
                                 System.out.println("yes you are right you won Rs.80,000");
                                 Thread.sleep(1600);
                                 System.out.println("\nYour next question for Rs.1,60,000");
@@ -675,8 +663,7 @@ public class Simple {
                                     System.out.println("\b");
                                 }
                                 break move4;
-                            case "LIFELINE":
-                            case "Lifeline":
+
                             case "lifeline":
                                 for (int asd = 1; asd <= 1000; asd++) {
                                     System.out.println("\b");
@@ -685,16 +672,17 @@ public class Simple {
                                 System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
 
                                 first = System.currentTimeMillis();
-                                sss = m.next();
+                                ans = m.next();
+                                ans = ans.toLowerCase();
                                 second = System.currentTimeMillis();
                                 timer = second - first + timer;
                                 if (timer > 31000) {
                                     System.out.println("Sorry you are too late. You have 30 Seconds to give answer");
                                     return;
                                 }
-                                switch (sss) {
+                                switch (ans) {
                                     case "a":
-                                    case "A":
+
                                         System.out.println("yes you are right you won Rs.80,000");
                                         Thread.sleep(1600);
                                         System.out.println("\nYour next question for Rs.1,60,000");
@@ -703,8 +691,7 @@ public class Simple {
                                             System.out.println("\b");
                                         }
                                         break move4;
-                                    case "LIFELINE":
-                                    case "Lifeline":
+
                                     case "lifeline":
                                         for (int asd = 1; asd <= 1000; asd++) {
                                             System.out.println("\b");
@@ -712,16 +699,17 @@ public class Simple {
                                         x.lifeline(1);
                                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                                         first = System.currentTimeMillis();
-                                        sss = m.next();
+                                        ans = m.next();
+                                        ans = ans.toLowerCase();
                                         second = System.currentTimeMillis();
                                         timer = second - first + timer;
                                         if (timer > 31000) {
                                             System.out.println("Sorry you are too late. You have 30 Seconds to give answer");
                                             return;
                                         }
-                                        switch (sss) {
+                                        switch (ans) {
                                             case "a":
-                                            case "A":
+
                                                 System.out.println("yes you are right you won Rs.80,000");
                                                 Thread.sleep(1600);
                                                 System.out.println("\nYour next question for Rs.1,60,000");
@@ -769,7 +757,8 @@ public class Simple {
 
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         long first = System.currentTimeMillis();
-                        String sss = m.next();
+                        String ans = m.next();
+                        ans = ans.toLowerCase();
                         long second = System.currentTimeMillis();
                         long timer = second - first;
                         if (timer > 31000) {
@@ -778,9 +767,8 @@ public class Simple {
 
                             return;
                         }
-                        switch (sss) {
+                        switch (ans) {
                             case "b":
-                            case "B":
                                 System.out.println("yes you are right you won Rs.1,60,000");
                                 Thread.sleep(1600);
                                 System.out.println("\nYour next question for Rs.3,20,000");
@@ -789,8 +777,7 @@ public class Simple {
                                     System.out.println("\b");
                                 }
                                 break move5;
-                            case "LIFELINE":
-                            case "Lifeline":
+
                             case "lifeline":
                                 for (int asd = 1; asd <= 1000; asd++) {
                                     System.out.println("\b");
@@ -799,16 +786,16 @@ public class Simple {
                                 System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
 
                                 first = System.currentTimeMillis();
-                                sss = m.next();
+                                ans = m.next();
+                                ans = ans.toLowerCase();
                                 second = System.currentTimeMillis();
                                 timer = second - first + timer;
                                 if (timer > 31000) {
                                     System.out.println("Sorry you are too late. You have 30 Seconds to give answer");
                                     return;
                                 }
-                                switch (sss) {
+                                switch (ans) {
                                     case "b":
-                                    case "B":
                                         System.out.println("yes you are right you won Rs.1,60,000");
                                         Thread.sleep(1600);
                                         System.out.println("\nYour next question for Rs.3,20,000");
@@ -817,24 +804,24 @@ public class Simple {
                                             System.out.println("\b");
                                         }
                                         break move5;
-                                    case "LIFELINE":
-                                    case "Lifeline":
+
                                     case "lifeline":
                                         for (int asd = 1; asd <= 1000; asd++) {
                                             System.out.println("\b");
                                         }
                                         x.lifeline(2);
                                         first = System.currentTimeMillis();
-                                        sss = m.next();
+                                        ans = m.next();
+                                        ans = ans.toLowerCase();
                                         second = System.currentTimeMillis();
                                         timer = second - first + timer;
                                         if (timer > 31000) {
                                             System.out.println("Sorry you are too late. You have 30 Seconds to give answer");
                                             return;
                                         }
-                                        switch (sss) {
+                                        switch (ans) {
                                             case "b":
-                                            case "B":
+
                                                 System.out.println("yes you are right you won Rs.1,60,000");
                                                 Thread.sleep(1600);
                                                 System.out.println("\nYour next question for Rs.3,20,000");
@@ -882,7 +869,8 @@ public class Simple {
 
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         long first = System.currentTimeMillis();
-                        String sss = m.next();
+                        String ans = m.next();
+                        ans = ans.toLowerCase();
                         long second = System.currentTimeMillis();
                         long timer = second - first;
                         if (timer > 31000) {
@@ -891,9 +879,9 @@ public class Simple {
 
                             return;
                         }
-                        switch (sss) {
+                        switch (ans) {
                             case "c":
-                            case "C":
+
                                 System.out.println("yes you are right you won Rs.3,20,000");
                                 Thread.sleep(1600);
                                 System.out.println("\nYour next question for Rs.6,40,000");
@@ -902,24 +890,24 @@ public class Simple {
                                     System.out.println("\b");
                                 }
                                 break move4;
-                            case "LIFELINE":
-                            case "Lifeline":
+
                             case "lifeline":
                                 for (int asd = 1; asd <= 1000; asd++) {
                                     System.out.println("\b");
                                 }
                                 x.lifeline(3);
                                 first = System.currentTimeMillis();
-                                sss = m.next();
+                                ans = m.next();
+                                ans = ans.toLowerCase();
                                 second = System.currentTimeMillis();
                                 timer = second - first + timer;
                                 if (timer > 31000) {
                                     System.out.println("Sorry you are too late. You have 30 Seconds to give answer");
                                     return;
                                 }
-                                switch (sss) {
+                                switch (ans) {
                                     case "c":
-                                    case "C":
+
                                         System.out.println("yes you are right you won Rs.3,20,000");
                                         Thread.sleep(1600);
                                         System.out.println("\nYour next question for Rs.6,40,000");
@@ -928,24 +916,23 @@ public class Simple {
                                             System.out.println("\b");
                                         }
                                         break move4;
-                                    case "LIFELINE":
-                                    case "Lifeline":
+
                                     case "lifeline":
                                         for (int asd = 1; asd <= 1000; asd++) {
                                             System.out.println("\b");
                                         }
                                         x.lifeline(3);
                                         first = System.currentTimeMillis();
-                                        sss = m.next();
+                                        ans = m.next();
+                                        ans = ans.toLowerCase();
                                         second = System.currentTimeMillis();
                                         timer = second - first + timer;
                                         if (timer > 31000) {
                                             System.out.println("Sorry you are too late. You have 30 Seconds to give answer");
                                             return;
                                         }
-                                        switch (sss) {
+                                        switch (ans) {
                                             case "c":
-                                            case "C":
                                                 System.out.println("yes you are right you won Rs.3,20,000");
                                                 Thread.sleep(1600);
                                                 System.out.println("\nYour next question for Rs.6,40,000");
@@ -994,7 +981,8 @@ public class Simple {
 
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         long first = System.currentTimeMillis();
-                        String sss = m.next();
+                        String ans = m.next();
+                        ans = ans.toLowerCase();
                         long second = System.currentTimeMillis();
                         long timer = second - first;
                         if (timer > 31000) {
@@ -1003,9 +991,9 @@ public class Simple {
 
                             return;
                         }
-                        switch (sss) {
+                        switch (ans) {
                             case "d":
-                            case "D":
+
                                 statement.executeUpdate("update score set score=640000 where name like '" + name + "' && age=" + age + ";");
                                 System.out.println("yes you are right you won Rs.6,40,000");
                                 Thread.sleep(1600);
@@ -1015,24 +1003,23 @@ public class Simple {
                                     System.out.println("\b");
                                 }
                                 break move4;
-                            case "LIFELINE":
-                            case "Lifeline":
+
                             case "lifeline":
                                 for (int asd = 1; asd <= 1000; asd++) {
                                     System.out.println("\b");
                                 }
                                 x.lifeline(4);
                                 first = System.currentTimeMillis();
-                                sss = m.next();
+                                ans = m.next();
+                                ans = ans.toLowerCase();
                                 second = System.currentTimeMillis();
                                 timer = second - first + timer;
                                 if (timer > 31000) {
                                     System.out.println("Sorry you are too late. You have 30 Seconds to give answer");
                                     return;
                                 }
-                                switch (sss) {
+                                switch (ans) {
                                     case "d":
-                                    case "D":
                                         statement.executeUpdate("update score set score=640000 where name like '" + name + "' && age=" + age + ";");
                                         System.out.println("yes you are right you won Rs.6,40,000");
                                         Thread.sleep(1600);
@@ -1043,23 +1030,22 @@ public class Simple {
                                         }
                                         break move4;
                                     case "LIFELINE":
-                                    case "Lifeline":
-                                    case "lifeline":
+
                                         for (int asd = 1; asd <= 1000; asd++) {
                                             System.out.println("\b");
                                         }
                                         x.lifeline(4);
                                         first = System.currentTimeMillis();
-                                        sss = m.next();
+                                        ans = m.next();
+                                        ans = ans.toLowerCase();
                                         second = System.currentTimeMillis();
                                         timer = second - first + timer;
                                         if (timer > 31000) {
                                             System.out.println("Sorry you are too late. You have 30 Seconds to give answer");
                                             return;
                                         }
-                                        switch (sss) {
+                                        switch (ans) {
                                             case "d":
-                                            case "D":
                                                 statement.executeUpdate("update score set score=640000 where name like '" + name + "' && age=" + age + ";");
                                                 System.out.println("yes you are right you won Rs.6,40,000");
                                                 Thread.sleep(1600);
@@ -1098,7 +1084,8 @@ public class Simple {
 
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         long first = System.currentTimeMillis();
-                        String sss = m.next();
+                        String ans = m.next();
+                        ans = ans.toLowerCase();
                         long second = System.currentTimeMillis();
                         long timer = second - first;
                         if (timer > 31000) {
@@ -1107,9 +1094,8 @@ public class Simple {
 
                             return;
                         }
-                        switch (sss) {
+                        switch (ans) {
                             case "a":
-                            case "A":
 
                                 System.out.println("yes you are right you won Rs.12,50,000");
                                 Thread.sleep(1600);
@@ -1119,24 +1105,23 @@ public class Simple {
                                     System.out.println("\b");
                                 }
                                 break move4;
-                            case "LIFELINE":
-                            case "Lifeline":
+
                             case "lifeline":
                                 for (int asd = 1; asd <= 1000; asd++) {
                                     System.out.println("\b");
                                 }
                                 x.lifeline(1);
                                 first = System.currentTimeMillis();
-                                sss = m.next();
+                                ans = m.next();
+                                ans = ans.toLowerCase();
                                 second = System.currentTimeMillis();
                                 timer = second - first + timer;
                                 if (timer > 31000) {
                                     System.out.println("Sorry you are too late. You have 30 Seconds to give answer");
                                     return;
                                 }
-                                switch (sss) {
+                                switch (ans) {
                                     case "a":
-                                    case "A":
 
                                         System.out.println("yes you are right you won Rs.12,50,000");
                                         Thread.sleep(1600);
@@ -1146,24 +1131,23 @@ public class Simple {
                                             System.out.println("\b");
                                         }
                                         break move4;
-                                    case "LIFELINE":
-                                    case "Lifeline":
+
                                     case "lifeline":
                                         for (int asd = 1; asd <= 1000; asd++) {
                                             System.out.println("\b");
                                         }
                                         x.lifeline(1);
                                         first = System.currentTimeMillis();
-                                        sss = m.next();
+                                        ans = m.next();
+                                        ans = ans.toLowerCase();
                                         second = System.currentTimeMillis();
                                         timer = second - first + timer;
                                         if (timer > 31000) {
                                             System.out.println("Sorry you are too late. You have 30 Seconds to give answer");
                                             return;
                                         }
-                                        switch (sss) {
+                                        switch (ans) {
                                             case "a":
-                                            case "A":
 
                                                 System.out.println("yes you are right you won Rs.12,50,000");
                                                 Thread.sleep(1600);
@@ -1202,7 +1186,8 @@ public class Simple {
 
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         long first = System.currentTimeMillis();
-                        String sss = m.next();
+                        String ans = m.next();
+                        ans = ans.toLowerCase();
                         long second = System.currentTimeMillis();
                         long timer = second - first;
                         if (timer > 31000) {
@@ -1211,9 +1196,8 @@ public class Simple {
 
                             return;
                         }
-                        switch (sss) {
+                        switch (ans) {
                             case "b":
-                            case "B":
                                 System.out.println("yes you are right you won Rs.12,50,000");
                                 Thread.sleep(1600);
                                 System.out.println("\nYour next question for Rs.25,00,000");
@@ -1222,24 +1206,23 @@ public class Simple {
                                     System.out.println("\b");
                                 }
                                 break move4;
-                            case "LIFELINE":
-                            case "Lifeline":
+
                             case "lifeline":
                                 for (int asd = 1; asd <= 1000; asd++) {
                                     System.out.println("\b");
                                 }
                                 x.lifeline(2);
                                 first = System.currentTimeMillis();
-                                sss = m.next();
+                                ans = m.next();
+                                ans = ans.toLowerCase();
                                 second = System.currentTimeMillis();
                                 timer = second - first + timer;
                                 if (timer > 31000) {
                                     System.out.println("Sorry you are too late. You have 30 Seconds to give answer");
                                     return;
                                 }
-                                switch (sss) {
+                                switch (ans) {
                                     case "b":
-                                    case "B":
                                         System.out.println("yes you are right you won Rs.12,50,000");
                                         Thread.sleep(1600);
                                         System.out.println("\nYour next question for Rs.25,00,000");
@@ -1248,24 +1231,23 @@ public class Simple {
                                             System.out.println("\b");
                                         }
                                         break move4;
-                                    case "LIFELINE":
-                                    case "Lifeline":
+
                                     case "lifeline":
                                         for (int asd = 1; asd <= 1000; asd++) {
                                             System.out.println("\b");
                                         }
                                         x.lifeline(2);
                                         first = System.currentTimeMillis();
-                                        sss = m.next();
+                                        ans = m.next();
+                                        ans = ans.toLowerCase();
                                         second = System.currentTimeMillis();
                                         timer = second - first + timer;
                                         if (timer > 31000) {
                                             System.out.println("Sorry you are too late. You have 30 Seconds to give answer");
                                             return;
                                         }
-                                        switch (sss) {
+                                        switch (ans) {
                                             case "b":
-                                            case "B":
                                                 System.out.println("yes you are right you won Rs.12,50,000");
                                                 Thread.sleep(1600);
                                                 System.out.println("\nYour next question for Rs.25,00,000");
@@ -1303,7 +1285,8 @@ public class Simple {
 
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         long first = System.currentTimeMillis();
-                        String sss = m.next();
+                        String ans = m.next();
+                        ans = ans.toLowerCase();
                         long second = System.currentTimeMillis();
                         long timer = second - first;
                         if (timer > 31000) {
@@ -1312,9 +1295,8 @@ public class Simple {
 
                             return;
                         }
-                        switch (sss) {
+                        switch (ans) {
                             case "b":
-                            case "B":
                                 System.out.println("yes you are right you won Rs.60,00,000");
                                 Thread.sleep(1600);
                                 System.out.println("\nYour next question for Rs.1 Crore");
@@ -1323,24 +1305,23 @@ public class Simple {
                                     System.out.println("\b");
                                 }
                                 break move4;
-                            case "LIFELINE":
-                            case "Lifeline":
+
                             case "lifeline":
                                 for (int asd = 1; asd <= 1000; asd++) {
                                     System.out.println("\b");
                                 }
                                 x.lifeline(2);
                                 first = System.currentTimeMillis();
-                                sss = m.next();
+                                ans = m.next();
+                                ans = ans.toLowerCase();
                                 second = System.currentTimeMillis();
                                 timer = second - first + timer;
                                 if (timer > 31000) {
                                     System.out.println("Sorry you are too late. You have 30 Seconds to give answer");
                                     return;
                                 }
-                                switch (sss) {
+                                switch (ans) {
                                     case "b":
-                                    case "B":
                                         System.out.println("yes you are right you won Rs.60,00,000");
                                         Thread.sleep(1600);
                                         System.out.println("\nYour next question for Rs.1 Crore");
@@ -1349,24 +1330,23 @@ public class Simple {
                                             System.out.println("\b");
                                         }
                                         break move4;
-                                    case "LIFELINE":
-                                    case "Lifeline":
+
                                     case "lifeline":
                                         for (int asd = 1; asd <= 1000; asd++) {
                                             System.out.println("\b");
                                         }
                                         x.lifeline(2);
                                         first = System.currentTimeMillis();
-                                        sss = m.next();
+                                        ans = m.next();
+                                        ans = ans.toLowerCase();
                                         second = System.currentTimeMillis();
                                         timer = second - first + timer;
                                         if (timer > 31000) {
                                             System.out.println("Sorry you are too late. You have 30 Seconds to give answer");
                                             return;
                                         }
-                                        switch (sss) {
+                                        switch (ans) {
                                             case "b":
-                                            case "B":
                                                 System.out.println("yes you are right you won Rs.60,00,000");
                                                 Thread.sleep(1600);
                                                 System.out.println("\nYour next question for Rs.1 Crore");
@@ -1407,7 +1387,8 @@ public class Simple {
 
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         long first = System.currentTimeMillis();
-                        String sss = m.next();
+                        String ans = m.next();
+                        ans = ans.toLowerCase();
                         long second = System.currentTimeMillis();
                         long timer = second - first;
                         if (timer > 31000) {
@@ -1416,9 +1397,8 @@ public class Simple {
 
                             return;
                         }
-                        switch (sss) {
+                        switch (ans) {
                             case "a":
-                            case "A":
 
                                 statement.executeUpdate("update score set score=10000000 where name like '" + name + "' && age=" + age + ";");
                                 System.out.println("yes you are right you won Rs.1 Crore");
@@ -1429,24 +1409,23 @@ public class Simple {
                                     System.out.println("\b");
                                 }
                                 break move4;
-                            case "LIFELINE":
-                            case "Lifeline":
+
                             case "lifeline":
                                 for (int asd = 1; asd <= 1000; asd++) {
                                     System.out.println("\b");
                                 }
                                 x.lifeline(1);
                                 first = System.currentTimeMillis();
-                                sss = m.next();
+                                ans = m.next();
+                                ans = ans.toLowerCase();
                                 second = System.currentTimeMillis();
                                 timer = second - first + timer;
                                 if (timer > 31000) {
                                     System.out.println("Sorry you are too late. You have 30 Seconds to give answer");
                                     return;
                                 }
-                                switch (sss) {
+                                switch (ans) {
                                     case "a":
-                                    case "A":
                                         statement.executeUpdate("update score set score=10000000 where name like '" + name + "' && age=" + age + ";");
                                         System.out.println("yes you are right you won Rs.1 Crore");
                                         Thread.sleep(1600);
@@ -1456,24 +1435,23 @@ public class Simple {
                                             System.out.println("\b");
                                         }
                                         break move4;
-                                    case "LIFELINE":
-                                    case "Lifeline":
+
                                     case "lifeline":
                                         for (int asd = 1; asd <= 1000; asd++) {
                                             System.out.println("\b");
                                         }
                                         x.lifeline(1);
                                         first = System.currentTimeMillis();
-                                        sss = m.next();
+                                        ans = m.next();
+                                        ans = ans.toLowerCase();
                                         second = System.currentTimeMillis();
                                         timer = second - first + timer;
                                         if (timer > 31000) {
                                             System.out.println("Sorry you are too late. You have 30 Seconds to give answer");
                                             return;
                                         }
-                                        switch (sss) {
+                                        switch (ans) {
                                             case "a":
-                                            case "A":
                                                 statement.executeUpdate("update score set score=10000000 where name like '" + name + "' && age=" + age + ";");
                                                 System.out.println("yes you are right you won Rs.1 Crore");
                                                 Thread.sleep(1600);
@@ -1512,7 +1490,8 @@ public class Simple {
 
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         long first = System.currentTimeMillis();
-                        String sss = m.next();
+                        String ans = m.next();
+                        ans = ans.toLowerCase();
                         long second = System.currentTimeMillis();
                         long timer = second - first;
                         if (timer > 31000) {
@@ -1521,9 +1500,8 @@ public class Simple {
 
                             return;
                         }
-                        switch (sss) {
+                        switch (ans) {
                             case "d":
-                            case "D":
 
                                 System.out.println("yes you are right you won Rs.3 Crore");
                                 Thread.sleep(1600);
@@ -1533,24 +1511,23 @@ public class Simple {
                                     System.out.println("\b");
                                 }
                                 break move4;
-                            case "LIFELINE":
-                            case "Lifeline":
+
                             case "lifeline":
                                 for (int asd = 1; asd <= 1000; asd++) {
                                     System.out.println("\b");
                                 }
                                 x.lifeline(4);
                                 first = System.currentTimeMillis();
-                                sss = m.next();
+                                ans = m.next();
+                                ans = ans.toLowerCase();
                                 second = System.currentTimeMillis();
                                 timer = second - first + timer;
                                 if (timer > 31000) {
                                     System.out.println("Sorry you are too late. You have 30 Seconds to give answer");
                                     return;
                                 }
-                                switch (sss) {
+                                switch (ans) {
                                     case "d":
-                                    case "D":
 
                                         System.out.println("yes you are right you won Rs.3 Crore");
                                         Thread.sleep(1600);
@@ -1560,24 +1537,23 @@ public class Simple {
                                             System.out.println("\b");
                                         }
                                         break move4;
-                                    case "LIFELINE":
-                                    case "Lifeline":
+
                                     case "lifeline":
                                         for (int asd = 1; asd <= 1000; asd++) {
                                             System.out.println("\b");
                                         }
                                         x.lifeline(4);
                                         first = System.currentTimeMillis();
-                                        sss = m.next();
+                                        ans = m.next();
+                                        ans = ans.toLowerCase();
                                         second = System.currentTimeMillis();
                                         timer = second - first + timer;
                                         if (timer > 31000) {
                                             System.out.println("Sorry you are too late. You have 30 Seconds to give answer");
                                             return;
                                         }
-                                        switch (sss) {
+                                        switch (ans) {
                                             case "d":
-                                            case "D":
 
                                                 System.out.println("yes you are right you won Rs.3 Crore");
                                                 Thread.sleep(1600);
@@ -1616,7 +1592,8 @@ public class Simple {
 
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         long first = System.currentTimeMillis();
-                        String sss = m.next();
+                        String ans = m.next();
+                        ans = ans.toLowerCase();
                         long second = System.currentTimeMillis();
                         long timer = second - first;
                         if (timer > 31000) {
@@ -1625,9 +1602,8 @@ public class Simple {
 
                             return;
                         }
-                        switch (sss) {
+                        switch (ans) {
                             case "c":
-                            case "C":
                                 System.out.println("yes you are right you won Rs.5 Crore");
                                 Thread.sleep(1600);
                                 System.out.println("\nYour next question for Rs.7 Crore");
@@ -1636,24 +1612,23 @@ public class Simple {
                                     System.out.println("\b");
                                 }
                                 break move4;
-                            case "LIFELINE":
-                            case "Lifeline":
+
                             case "lifeline":
                                 for (int asd = 1; asd <= 1000; asd++) {
                                     System.out.println("\b");
                                 }
                                 x.lifeline(3);
                                 first = System.currentTimeMillis();
-                                sss = m.next();
+                                ans = m.next();
+                                ans = ans.toLowerCase();
                                 second = System.currentTimeMillis();
                                 timer = second - first + timer;
                                 if (timer > 31000) {
                                     System.out.println("Sorry you are too late. You have 30 Seconds to give answer");
                                     return;
                                 }
-                                switch (sss) {
+                                switch (ans) {
                                     case "c":
-                                    case "C":
                                         System.out.println("yes you are right you won Rs.5 Crore");
                                         Thread.sleep(1600);
                                         System.out.println("\nYour Last question for Rs.7 Crore");
@@ -1662,17 +1637,17 @@ public class Simple {
                                             System.out.println("\b");
                                         }
                                         break move4;
-                                    case "LIFELINE":
-                                    case "Lifeline":
+
                                     case "lifeline":
                                         for (int asd = 1; asd <= 1000; asd++) {
                                             System.out.println("\b");
                                         }
                                         x.lifeline(3);
-                                        sss = m.next();
-                                        switch (sss) {
+                                        ans = m.next();
+                                        ans = ans.toLowerCase();
+                                        switch (ans) {
                                             case "c":
-                                            case "C":
+
                                                 System.out.println("yes you are right you won Rs.5 Crore");
                                                 Thread.sleep(1600);
                                                 System.out.println("\nYour next question for Rs.7 Crore");
@@ -1711,7 +1686,8 @@ public class Simple {
 
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         long first = System.currentTimeMillis();
-                        String sss = m.next();
+                        String ans = m.next();
+                        ans = ans.toLowerCase();
                         long second = System.currentTimeMillis();
                         long timer = second - first;
                         if (timer > 31000) {
@@ -1720,9 +1696,9 @@ public class Simple {
 
                             return;
                         }
-                        switch (sss) {
+                        switch (ans) {
                             case "a":
-                            case "A":
+
                                 statement.executeUpdate("update score set score=70000000 where name like '" + name + "' && age=" + age + ";");
                                 System.out.println("yes you are right you won Rs.7 Crore\n");
                                 Thread.sleep(500);
@@ -1784,24 +1760,24 @@ public class Simple {
                                 }
                                 Thread.sleep(3000);
                                 break move4;
-                            case "LIFELINE":
-                            case "Lifeline":
+
                             case "lifeline":
                                 for (int asd = 1; asd <= 1000; asd++) {
                                     System.out.println("\b");
                                 }
                                 x.lifeline(1);
                                 first = System.currentTimeMillis();
-                                sss = m.next();
+                                ans = m.next();
+                                ans = ans.toLowerCase();
                                 second = System.currentTimeMillis();
                                 timer = second - first + timer;
                                 if (timer > 31000) {
                                     System.out.println("Sorry you are too late. You have 30 Seconds to give answer");
                                     return;
                                 }
-                                switch (sss) {
+                                switch (ans) {
                                     case "a":
-                                    case "A":
+
                                         statement.executeUpdate("update score set score=70000000 where name like '" + name + "' && age=" + age + ";");
                                         System.out.println("yes you are right you won Rs.7 Crore\n");
                                         Thread.sleep(5000);
@@ -1846,25 +1822,25 @@ public class Simple {
                                         }
                                         Thread.sleep(5000);
                                         break move4;
-                                    case "LIFELINE":
-                                    case "Lifeline":
+
                                     case "lifeline":
                                         for (int asd = 1; asd <= 1000; asd++) {
                                             System.out.println("\b");
                                         }
                                         x.lifeline(1);
                                         first = System.currentTimeMillis();
-                                        sss = m.next();
+                                        ans = m.next();
+                                        ans = ans.toLowerCase();
                                         second = System.currentTimeMillis();
                                         timer = second - first + timer;
                                         if (timer > 31000) {
                                             System.out.println("Sorry you are too late. You have 30 Seconds to give answer");
                                             return;
                                         }
-                                        sss = m.next();
-                                        switch (sss) {
+                                        ans = m.next();
+                                        ans = ans.toLowerCase();
+                                        switch (ans) {
                                             case "a":
-                                            case "A":
                                                 statement.executeUpdate("update score set score=70000000 where name like '" + name + "' && age=" + age + ";");
                                                 System.out.println("yes you are right you won Rs.7 Crore\n");
                                                 Thread.sleep(2000);
@@ -1949,13 +1925,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
-                            case "B":
+
                             case "b":
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -1973,13 +1950,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
-                            case "B":
+
                             case "b":
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -1995,13 +1973,13 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "a":
-                            case "A":
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2026,20 +2004,20 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "c":
-                            case "C":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
                                 System.out.println("you are wrong");
                                 Thread.sleep(1500);
                         }
-
 
                     } else if (perm % 3 == 1) {
                         System.out.println("which of the following English films was the first one to be dubbed in Hindi ?");
@@ -2050,13 +2028,13 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "a":
-                            case "A":
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2072,13 +2050,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "d":
-                            case "D":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2103,13 +2082,13 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "b":
-                            case "B":
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2127,13 +2106,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "c":
-                            case "C":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2149,13 +2129,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "a":
-                            case "A":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2180,13 +2161,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "d":
-                            case "D":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2204,13 +2186,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "c":
-                            case "C":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2226,13 +2209,13 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "d":
-                            case "D":
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2257,13 +2240,13 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "d":
-                            case "D":
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2281,13 +2264,13 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "a":
-                            case "A":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
                             case "exit":
                                 return;
                             default:
@@ -2305,13 +2288,13 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "a":
-                            case "A":
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2336,13 +2319,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "b":
-                            case "B":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2360,13 +2344,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "d":
-                            case "D":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2384,13 +2369,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "c":
-                            case "C":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2415,13 +2401,13 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "d":
-                            case "D":
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2439,13 +2425,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "a":
-                            case "A":
+
                                 System.out.println("You are right ");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2463,13 +2450,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "c":
-                            case "C":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2494,13 +2482,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "c":
-                            case "C":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2518,13 +2507,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "b":
-                            case "B":
+
                                 System.out.println("You are right ");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2542,13 +2532,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "c":
-                            case "C":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2572,13 +2563,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "b":
-                            case "B":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2596,13 +2588,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "a":
-                            case "A":
+
                                 System.out.println("You are right ");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2620,13 +2613,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "c":
-                            case "C":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2651,13 +2645,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "a":
-                            case "A":
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2675,13 +2670,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "c":
-                            case "C":
+
                                 System.out.println("You are right ");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2699,13 +2695,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "b":
-                            case "B":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2730,13 +2727,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "a":
-                            case "A":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2754,13 +2752,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "a":
-                            case "A":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2776,13 +2775,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "b":
-                            case "":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2806,13 +2806,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "c":
-                            case "C":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2830,13 +2831,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "a":
-                            case "A":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2852,13 +2854,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "d":
-                            case "D":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2883,13 +2886,13 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "b":
-                            case "B":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
                             case "exit":
                                 return;
                             default:
@@ -2907,13 +2910,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "c":
-                            case "C":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2929,13 +2933,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "a":
-                            case "A":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2960,13 +2965,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "d":
-                            case "D":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -2984,13 +2990,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "c":
-                            case "C":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -3006,13 +3013,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "d":
-                            case "D":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -3037,13 +3045,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "d":
-                            case "D":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -3061,13 +3070,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "a":
-                            case "A":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -3085,13 +3095,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "a":
-                            case "A":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -3116,13 +3127,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "b":
-                            case "B":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -3140,13 +3152,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "d":
-                            case "D":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -3164,13 +3177,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "c":
-                            case "C":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -3195,13 +3209,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "d":
-                            case "D":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -3219,13 +3234,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "a":
-                            case "A":
+
                                 System.out.println("You are right ");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -3243,13 +3259,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "c":
-                            case "C":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -3274,13 +3291,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "c":
-                            case "C":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -3298,13 +3316,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "b":
-                            case "B":
+
                                 System.out.println("You are right ");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -3322,13 +3341,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "c":
-                            case "C":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -3352,13 +3372,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "b":
-                            case "B":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -3376,13 +3397,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "a":
-                            case "A":
+
                                 System.out.println("You are right ");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -3400,13 +3422,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "c":
-                            case "C":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -3431,13 +3454,13 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "a":
-                            case "A":
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -3455,13 +3478,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "c":
-                            case "C":
+
                                 System.out.println("You are right ");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
@@ -3479,13 +3503,14 @@ public class Simple {
                         }
                         System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
                         String prac = m.next();
+                        prac = prac.toLowerCase();
                         switch (prac) {
                             case "b":
-                            case "B":
+
                                 System.out.println("You are right");
                                 Thread.sleep(1500);
                                 break;
-                            case "Exit":
+
                             case "exit":
                                 return;
                             default:
