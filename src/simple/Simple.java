@@ -3881,20 +3881,12 @@ public class Simple {
                             System.out.println();
                         }
                         String call = m.next();
+                        call = call.toLowerCase();
                         switch (call) {
-
-                            case "Ram":
-                            case "RAM":
                             case "ram":
-                            case "Rahim":
                             case "rahim":
-                            case "RAHIM":
-                            case "Rajan":
                             case "rajan":
-                            case "RAJAN":
-                            case "Rohit":
                             case "rohit":
-                            case "ROHIT":
 
                                 System.out.print("Call is Diverting to " + call);
 
@@ -4158,20 +4150,13 @@ public class Simple {
                                 System.out.println();
                             }
                             String call = m.next();
+                            call = call.toLowerCase();
                             switch (call) {
 
-                                case "Ram":
-                                case "RAM":
                                 case "ram":
-                                case "Rahim":
                                 case "rahim":
-                                case "RAHIM":
-                                case "Rajan":
                                 case "rajan":
-                                case "RAJAN":
-                                case "Rohit":
                                 case "rohit":
-                                case "ROHIT":
 
                                     System.out.print("Call is Diverting to " + call);
 
@@ -4436,20 +4421,12 @@ public class Simple {
                                 System.out.println();
                             }
                             String call = m.next();
+                            call = call.toLowerCase();
                             switch (call) {
-
-                                case "Ram":
-                                case "RAM":
                                 case "ram":
-                                case "Rahim":
                                 case "rahim":
-                                case "RAHIM":
-                                case "Rajan":
                                 case "rajan":
-                                case "RAJAN":
-                                case "Rohit":
                                 case "rohit":
-                                case "ROHIT":
 
                                     System.out.print("Call is Diverting to " + call);
 
@@ -4489,7 +4466,6 @@ public class Simple {
 
                             }
 
-
                         } else {
                             System.out.println("You have already used this lifeline");
                             lifeline(3);
@@ -4523,7 +4499,6 @@ public class Simple {
                             }
 
                             System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
-
 
                         } else {
                             System.out.println("you have already used this lifeline");
@@ -4573,7 +4548,6 @@ public class Simple {
                                 lifeline(3);
                             }
 
-
                             System.out.println("Renew any lifeline");
                         } else {
                             System.out.println("You have already used this lifeline");
@@ -4605,7 +4579,6 @@ public class Simple {
                     } else if (lifeline == 7) {
                         lifeline7 = lifeline7 + 1;
                         if (lifeline7 == 1) {
-
 
                             System.out.println("Double dip");
                             System.out.println("Enter Two Option 1 by 1");
@@ -4719,20 +4692,12 @@ public class Simple {
                                 System.out.println();
                             }
                             String call = m.next();
+                            call = call.toLowerCase();
                             switch (call) {
-
-                                case "Ram":
-                                case "RAM":
                                 case "ram":
-                                case "Rahim":
                                 case "rahim":
-                                case "RAHIM":
-                                case "Rajan":
                                 case "rajan":
-                                case "RAJAN":
-                                case "Rohit":
                                 case "rohit":
-                                case "ROHIT":
 
                                     System.out.print("Call is Diverting to " + call);
 
@@ -4770,9 +4735,7 @@ public class Simple {
                                     System.out.println("I think D is True");
                                     break;
 
-
                             }
-
 
                         } else {
                             System.out.println("You have already used this lifeline");
@@ -4807,7 +4770,6 @@ public class Simple {
                             }
 
                             System.out.print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<\nAns:-");
-
 
                         } else {
                             System.out.println("you have already used this lifeline");
@@ -4857,7 +4819,6 @@ public class Simple {
                                 lifeline(4);
                             }
 
-
                         } else {
                             System.out.println("You have already used this lifeline");
                             lifeline(4);
@@ -4888,7 +4849,6 @@ public class Simple {
                         lifeline7 = lifeline7 + 1;
                         if (lifeline7 == 1) {
 
-
                             System.out.println("Double dip");
                             System.out.println("Enter Two Option 1 by 1");
                             for (int space = 1; space <= 23; space++) {
@@ -4896,7 +4856,6 @@ public class Simple {
                             }
                             String as;
                             as = m.next();
-
 
                             switch (as) {
                                 case "d":
@@ -4915,20 +4874,14 @@ public class Simple {
                         lifeline(4);
                     }
 
-
                 } catch (InterruptedException exc) {
                     System.out.println("!!!!!!!!!!!!!!!!!!!!RESTART!!!!!!!!!!!!!!!!!!!");
                 }
-
             }
-
 
         }
 
-
     }
 
-
 }
-
 
